@@ -25,11 +25,11 @@ import urllib.request
 from pathlib import Path
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
-PORT           = int(os.environ.get("PORT", 2947))
+PORT           = int(os.environ.get("PORT", 8080))
 NOTION_TOKEN   = os.environ.get("NOTION_TOKEN", "")
 MARKD_PASSWORD = os.environ.get("MARKD_PASSWORD", "")
 MARKD_SECRET   = os.environ.get("MARKD_SECRET", "")
-NOTION_DB_ID   = "c1305bbb-958f-4a70-8c27-0fd287eb5fef"
+NOTION_DB_ID   = "34281f9a4ca581b59496e6aa3daa9352"
 NOTION_VERSION = "2022-06-28"
 NOTION_API     = "https://api.notion.com/v1"
 SESSION_TTL    = 60 * 60 * 24 * 30   # 30 days
