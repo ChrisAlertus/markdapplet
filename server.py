@@ -10,6 +10,7 @@ Required env vars:
                     python3 -c "import secrets; print(secrets.token_hex(32))"
 
 Optional:
+  NOTION_DB_ID    — Notion database ID; defaults to the built-in bookmarks DB
   PORT            — Railway sets this automatically; defaults to 2947 locally
 """
 
@@ -29,7 +30,7 @@ PORT           = int(os.environ.get("PORT", 8080))
 NOTION_TOKEN   = os.environ.get("NOTION_TOKEN", "")
 MARKD_PASSWORD = os.environ.get("MARKD_PASSWORD", "")
 MARKD_SECRET   = os.environ.get("MARKD_SECRET", "")
-NOTION_DB_ID   = "34281f9a4ca581b59496e6aa3daa9352"
+NOTION_DB_ID   = os.environ.get("NOTION_DB_ID", "8ee77d9e-30fc-4b32-a7d6-0c0db6ba487b")
 NOTION_VERSION = "2022-06-28"
 NOTION_API     = "https://api.notion.com/v1"
 SESSION_TTL    = 60 * 60 * 24 * 30   # 30 days
